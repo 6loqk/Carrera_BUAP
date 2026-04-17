@@ -27,13 +27,21 @@ public class Menu extends JFrame {
 
         // <-- Contenido -->
 
+        JButton hombres = new JButton("Hombres");
+        hombres.setBounds(380, 150, 140, 40);
+        hombres.setFont(new Font("Times New Roman", Font.BOLD, 25));
 
+        JButton mujeres = new JButton("Mujeres");
+        mujeres.setBounds(380, 250, 140, 40);
+        mujeres.setFont(new Font("Times New Roman", Font.BOLD, 25));
 
 
 
         panel.add(titulo1);
         panel.add(titulo2);
         panel.add(linea1);
+        panel.add(hombres);
+        panel.add(mujeres);
         add(panel);
         setVisible(true);
     }

@@ -9,7 +9,7 @@ public class Inicio extends JFrame {
     }
     public Inicio() {
         setTitle("Carrera BUAP 2026");
-        setSize(900, 500);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(true);
@@ -18,47 +18,47 @@ public class Inicio extends JFrame {
         panel.setLayout(null);
 
         JLabel titulo = new JLabel("CARRERA BUAP 2026");
-        titulo.setBounds(340, -370, 800, 800);
-        titulo.setFont(new Font("Times New Roman", Font.BOLD, 30));
+        titulo.setBounds(750, -330, 800, 800);
+        titulo.setFont(new Font("Times New Roman", Font.BOLD, 45));
 
         JSeparator linea1 = new JSeparator();
-        linea1.setBounds(30, 80, 820, 2);
+        linea1.setBounds(30, 130, 1850, 2);
 
         // <-- Formulario -->
 
         JLabel usuario = new JLabel("Usuario:");
-        usuario.setBounds(320, 100, 200, 50);
-        usuario.setFont(new Font("Times New Roman", Font.BOLD, 17));
+        usuario.setBounds(850, 200, 200, 50);
+        usuario.setFont(new Font("Times New Roman", Font.BOLD, 30));
 
         JTextField usuarioText = new JTextField(15);
-        usuarioText.setBounds(510, 110, 150, 25);
+        usuarioText.setBounds(1100, 215, 180, 30);
         usuarioText.setFont(new Font("Times New Roman", Font.BOLD, 15));
 
         JLabel clave = new JLabel("Clave:");
-        clave.setBounds(320, 150, 200, 50);
-        clave.setFont(new Font("Times New Roman", Font.BOLD, 17));
+        clave.setBounds(850, 430, 200, 50);
+        clave.setFont(new Font("Times New Roman", Font.BOLD, 30));
 
         JTextField claveText = new JTextField(15);
-        claveText.setBounds(510, 160, 150, 25);
+        claveText.setBounds(1100, 440, 180, 30);
         claveText.setFont(new Font("Times New Roman", Font.BOLD, 15));
 
         ImageIcon logoOriginal = new ImageIcon("src/images/Logo_de_la_BUAP.png");
-        Image imgRedimensionada = logoOriginal.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+        Image imgRedimensionada = logoOriginal.getImage().getScaledInstance(300, 300, Image.SCALE_SMOOTH);
         ImageIcon logo = new ImageIcon(imgRedimensionada);
 
         JLabel logoLabel = new JLabel(logo);
-        logoLabel.setBounds(-30, -10, 400, 400);
+        logoLabel.setBounds(150, 180, 400, 400);
 
         JSeparator linea2 = new JSeparator();
-        linea2.setBounds(30, 300, 820, 2);
+        linea2.setBounds(30, 680, 1850, 2);
 
         JButton ingresar = new JButton("Ingresar");
-        ingresar.setFont(new Font("Times New Roman", Font.BOLD, 20));
-        ingresar.setBounds(120, 340, 150, 50);
+        ingresar.setFont(new Font("Times New Roman", Font.BOLD, 40));
+        ingresar.setBounds(250, 800, 250, 80);
 
         JButton salir = new JButton("Salir");
-        salir.setFont(new Font("Times New Roman", Font.BOLD, 20));
-        salir.setBounds(650, 340, 150, 50);
+        salir.setFont(new Font("Times New Roman", Font.BOLD, 40));
+        salir.setBounds(1500, 800, 250, 80);
 
         ingresar.addActionListener(e -> {
             //String usuarioE = usuarioText.getText();
