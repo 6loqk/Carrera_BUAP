@@ -14,12 +14,23 @@ public class Inicio extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(true);
 
-        JPanel panel = new JPanel();
+        ImageIcon bg = new ImageIcon("src/images/background_cu2.jpg");
+
+        JPanel panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(bg.getImage(), 0, 0, getWidth(), getHeight(), this);
+                g.setColor(new Color(0, 0, 0, 50));
+                g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+            }
+        };
         panel.setLayout(null);
 
         JLabel titulo = new JLabel("CARRERA BUAP 2026");
         titulo.setBounds(750, -330, 800, 800);
         titulo.setFont(new Font("Times New Roman", Font.BOLD, 45));
+        titulo.setForeground(Color.WHITE);
 
         JSeparator linea1 = new JSeparator();
         linea1.setBounds(30, 130, 1850, 2);
@@ -29,6 +40,7 @@ public class Inicio extends JFrame {
         JLabel usuario = new JLabel("Usuario:");
         usuario.setBounds(850, 200, 200, 50);
         usuario.setFont(new Font("Times New Roman", Font.BOLD, 30));
+        usuario.setForeground(Color.WHITE);
 
         JTextField usuarioText = new JTextField(15);
         usuarioText.setBounds(1100, 215, 180, 30);
@@ -37,12 +49,13 @@ public class Inicio extends JFrame {
         JLabel clave = new JLabel("Clave:");
         clave.setBounds(850, 430, 200, 50);
         clave.setFont(new Font("Times New Roman", Font.BOLD, 30));
+        clave.setForeground(Color.WHITE);
 
         JTextField claveText = new JTextField(15);
         claveText.setBounds(1100, 440, 180, 30);
         claveText.setFont(new Font("Times New Roman", Font.BOLD, 15));
 
-        ImageIcon logoOriginal = new ImageIcon("src/images/Logo_de_la_BUAP.png");
+        ImageIcon logoOriginal = new ImageIcon("src/images/BUAP-Logo_B.png");
         Image imgRedimensionada = logoOriginal.getImage().getScaledInstance(300, 300, Image.SCALE_SMOOTH);
         ImageIcon logo = new ImageIcon(imgRedimensionada);
 
