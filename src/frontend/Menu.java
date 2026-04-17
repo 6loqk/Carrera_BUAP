@@ -6,10 +6,10 @@ import java.awt.*;
 public class Menu extends JFrame {
     public Menu() {
         setTitle("Carrera BUAP 2026");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(900, 500);
-        setResizable(false);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(true);
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
@@ -17,7 +17,7 @@ public class Menu extends JFrame {
         // <-- Titulo -->
         JLabel titulo1 = new JLabel("CARRERA BUAP 2026");
         JLabel titulo2 = new JLabel("MENÚ GENERAL");
-        titulo1.setBounds(300, -370, 800, 800);
+        titulo1.setBounds(750, -330, 800, 800);
         titulo2.setBounds(340, -330, 800, 800);
         titulo1.setFont(new Font("Times New Roman", Font.BOLD, 27));
         titulo2.setFont(new Font("Times New Roman", Font.BOLD, 27));
